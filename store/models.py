@@ -21,3 +21,11 @@ class Product(models.Model):
     photo = models.ImageField(upload_to='media/products')
     details = models.TextField()
     posted_by = models.ForeignKey(User,on_delete=models.CASCADE)
+    price = models.TextField(max_length=6)
+    published_date = models.DateField()
+    category = models.TextField(max_length=50)
+    featured = models.BooleanField()
+
+class admin(models.Model):
+    name = models.CharField(max_length=100)
+    
