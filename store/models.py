@@ -28,4 +28,5 @@ class Product(models.Model):
 
 class admin(models.Model):
     name = models.CharField(max_length=100)
-    
+    password = models.CharField(max_length=50)
+    email = models.EmailField(null=False,blank=False)
